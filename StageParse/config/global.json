@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Stage": {
+            "applicationId": "Gc6spo6rrxcDJr5Trp23777SrPRmaCr9PEHDDvNl", 
+            "masterKey": "JZ6bHj9nQMXXxa43M0FdlbZSTkTdmYZe5d2XWtsd"
+        }, 
+        "_default": {
+            "link": "Stage"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.2"
+    }
+}
