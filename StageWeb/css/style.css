@@ -1,0 +1,224 @@
+
+
+body:before {
+  content: "";
+  background-image: url(http://puu.sh/dRntP/ed27f8e4b8.jpeg);
+
+  z-index: -1; /* Keep the background behind the content */
+  height: 110%; width: 110%; /* Using Glen Maddern's trick /via @mente */
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+  x-po
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+body {
+/*  padding-top: 100px;
+*/
+}
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.left {
+  border-top-left-radius: 25px;
+
+}
+
+.right {
+
+  border-top-right-radius: 25px;
+
+}
+
+.centerContent {
+	width:80%;
+	float: center;
+	padding-left: 25%;	
+}
+
+.space {
+	padding-top: 10px;
+}
+
+.input-group-addon.primary {
+  color: rgb(255, 255, 255);
+  background-color: rgb(50, 118, 177);
+  border-color: rgb(40, 94, 142);
+}
+.input-group-addon.success {
+  color: rgb(255, 255, 255);
+  background-color: rgb(92, 184, 92);
+  border-color: rgb(76, 174, 76);
+}
+.input-group-addon.info {
+  color: rgb(255, 255, 255);
+  background-color: rgb(57, 179, 215);
+  border-color: rgb(38, 154, 188);
+}
+.input-group-addon.warning {
+  color: rgb(255, 255, 255);
+  background-color: rgb(240, 173, 78);
+  border-color: rgb(238, 162, 54);
+}
+.input-group-addon.danger {
+  color: rgb(255, 255, 255);
+  background-color: rgb(217, 83, 79);
+  border-color: rgb(212, 63, 58);
+}
+
+
+.fan {
+
+}
+
+.band {
+  background-repeat: no-repeat;
+/*  background-position: center;
+  background-image: url('http://static9.depositphotos.com/1113936/1198/v/950/depositphotos_11982581-Rock-concert-band-silhouettes-burst-background-illustration-vect.jpg');
+  background-size: 100%;*/
+}
+@media (min-width: 992px) {
+
+  .toTheBottom{
+    height:500px;
+
+  }
+}
+
+.toTheBottom{
+  min-height: :10000px;
+}
+
+.withBorder{
+ border: 2px solid;
+}
+
+.spacer {
+  margin-top: 100px; /* define margin as you see fit */
+}
+
+a{
+  color: #621BEC;
+}
+
+.white{
+  color: white;
+  font-size: 1.0em;
+  max-width: 44px; !important
+  max-height: 34px;!important
+  display: block;
+
+}
+
+.vertical-center {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+}
+
+.has-error input[type=text], 
+.has-error input[type=email], 
+.has-error select {
+  border-color: #2f2f2f;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+
+.hasFadedBackground{
+  background-color: rgba(128, 128, 128, 0.13);
+  min-width: 800px;
+
+}
+
+.toTheBottom2{
+  position: fixed;
+  min-height: 100%;
+}
+
+.minpadding{
+  padding-right: 2%;
+}
+
+#indiv {
+  max-width: 100%;
+  height: auto !important;
+}
+
+.widertable{
+  max-width: 100%;
+}
+
+.editable-container {
+  max-width: 100%;
+  width: 100%;
+}
+
+.editable-inline{
+  max-width: 100%;
+  width: 100%;
+}
+
+.editable-container.editable-inline{
+  width: 100%;
+}
+
+.editable-input {
+
+  width: 90%;
+
+}
+
+.editable-click, a.editable-click, a.editable-click:hover {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.fitinside{
+  max-width: 100%;
+}
+
+progress {
+  max-width: 70%;
+}
+
+#holder { border: 10px dashed #ccc; max-width: 100%;}
+#holder.hover { border: 10px dashed #0c0; }
+
+#holder p { margin: 10px; font-size: 1000px; }
+progress { width: 70%; }
+progress:after { content: '%'; }
+.fail { background: #c00; padding: 2px; color: #fff; }
+.hidden { display: none !important;}
+#s2id_e9{
+  border-color: pink;
+}
+
+.pac-container {
+  z-index: 1040 !important;
+}
+
+.form-control{
+  max-width: 100%;
+}
+
+
+has-success .help-block, .has-success .control-label, .has-success .radio, .has-success .checkbox, .has-success .radio-inline, .has-success .checkbox-inline, .has-success .form-control-feedback {
+color: white;
+}
+
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error .form-control-feedback {
+color: white;
+}
