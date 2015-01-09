@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "CustomScrollView.h"
+#import <Parse/Parse.h>
+#import "Band.h"
+#import "CloudFunction.h"
+#import <Social/Social.h>
+#import "SocialButtons.h"
+
 @interface BandDetailedViewController : UIViewController <UIScrollViewDelegate>
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withData:(NSObject *)dt;
+- (id)initWithData:(Band *)dt;
+
+@property (nonatomic, strong) PFObject *data;
 @end

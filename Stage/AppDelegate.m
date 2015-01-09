@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
+#import "Favorits.h"
+#import "FindsViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,6 +21,41 @@
     // Override point for customization after application launch.
     [Parse setApplicationId:@"Gc6spo6rrxcDJr5Trp23777SrPRmaCr9PEHDDvNl"
                   clientKey:@"yp8oYsiW69GkQzthVOH56Ijq6BSfiH4Mo7U1qOmj"];
+    // Register for Push Notitications
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                             categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
+
+    UITabBarController *tabBars = [[UITabBarController alloc] init];
+
+    NSMutableArray *localViewControllersArray = [[NSMutableArray alloc] init];
+    
+    // Home view controller
+    ViewController *vc = [[ViewController alloc] init];
+    vc.title =  vc.tabBarController.title = @"Home";
+    vc.tabBarItem.image = [UIImage imageNamed:@"home60.png"] ;
+    
+    // Favorit Controller
+    Favorits *fav = [[Favorits alloc] init];
+    fav.title = @"Music Player";
+    fav.tabBarItem.image = [UIImage imageNamed:@"star51.png"] ;
+
+    // Finds Controller
+    
+    FindsViewController *finds = [[FindsViewController alloc] init];
+    finds.title = @"Finds";
+    finds.tabBarItem.image = [UIImage imageNamed:@"merge"];
+    
+    [localViewControllersArray addObject:vc];
+    [localViewControllersArray addObject:fav];
+    [localViewControllersArray addObject:finds];
+    tabBars.viewControllers = localViewControllersArray;
+    tabBars.view.autoresizingMask=(UIViewAutoresizingFlexibleHeight);
+    self.window.rootViewController = tabBars;
 
     return YES;
 }
@@ -125,6 +162,18 @@
             abort();
         }
     }
+}
+
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
 }
 
 @end

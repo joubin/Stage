@@ -8,7 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
+#import "FileManager.h"
+#import "Song.h"
 @interface Band : NSObject
-@property (strong, nonatomic) NSString *bandName;
+
+- (id) initWithPFObject:(PFObject *)pfObject;
+- (NSString *) bandID;
+-(PFObject *)getPFObject;
+@property (nonatomic, strong) NSMutableDictionary *dataFile;
+@property (strong, nonatomic) NSMutableArray *songList;
+@property (strong, nonatomic) PFObject *pfobject;
+
 
 @end

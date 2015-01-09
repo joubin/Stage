@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "GetData.h"
-#import "SubView.h"
 #import "BandDetailedViewController.h"
 #import <Parse/Parse.h>
 #import "LocationManager.h"
-@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@interface ViewController : UIViewController
 @end
 
